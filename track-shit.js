@@ -1,4 +1,4 @@
-// track.js (served from your analytics server)
+// track.js
 (function () {
   const siteId = document.currentScript.getAttribute('data-site-id');
   const payload = {
@@ -9,9 +9,9 @@
     timestamp: new Date().toISOString(),
   };
 
-  fetch('https://your-analytics.com/api/collect', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+  fetch("http://localhost:8000/api/collect", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
 })();
