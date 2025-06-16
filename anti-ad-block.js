@@ -1,3 +1,4 @@
+
     function showAdBlockOverlay() {
       const adBlockOverlay = document.createElement('div');
       adBlockOverlay.className = 'fixed inset-0 flex flex-col items-center justify-center bg-black bg-opacity-90 backdrop-blur-sm z-[9999] text-center p-8';
@@ -87,3 +88,17 @@
 
     // Run detection on page load
     window.addEventListener('load', detectAdBlock);
+
+    // Animation for fade-in effect
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    `;
+    document.head.appendChild(style);
+  
