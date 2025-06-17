@@ -6,7 +6,7 @@ function showAdBlockOverlay() {
   adBlockOverlay.setAttribute('aria-labelledby', 'adblock-title');
   adBlockOverlay.setAttribute('aria-describedby', 'adblock-description');
   adBlockOverlay.innerHTML = `
-    <div class="bg-black text-white rounded-2xl p-8 shadow-2xl max-w-sm sm:max-w-md w-full animate-fade-in border-4 border-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-red-500 animated-border">
+    <div class="bg-black text-white rounded-2xl p-8 shadow-2xl max-w-sm sm:max-w-md w-full animate-fade-in border-4 border-transparent bg-clip-border border-gradient-to-r from-red-500 via-orange-500 to-red-500">
       <i data-lucide="alert-triangle" class="w-12 h-12 text-error mx-auto mb-4" aria-hidden="true"></i>
       <h2 id="adblock-title" class="text-2xl sm:text-3xl font-bold mb-4">Ad Blocker Detected</h2>
       <p id="adblock-description" class="text-sm sm:text-base mb-6">Please disable your ad blocker to continue accessing CrazyAlts. Ads help us keep this service free!</p>
@@ -98,18 +98,13 @@ style.innerHTML = `
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .bg-gradient-to-r {
-    background-image: linear-gradient(45deg, #f87171, #fbbf24, #f87171);
-    border-radius: 8px;
-    border: 4px solid transparent;
+  /* Gradient Border */
+  .bg-clip-border {
     background-clip: padding-box;
-    animation: gradientBorder 2s linear infinite;
   }
 
-  @keyframes gradientBorder {
-    0% { border-color: #f87171; }
-    50% { border-color: #fbbf24; }
-    100% { border-color: #f87171; }
+  .border-gradient-to-r {
+    border-image: linear-gradient(to right, #f87171, #fb923c) 1;
   }
 `;
 document.head.appendChild(style);
