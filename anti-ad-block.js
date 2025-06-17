@@ -6,7 +6,7 @@
       adBlockOverlay.setAttribute('aria-labelledby', 'adblock-title');
       adBlockOverlay.setAttribute('aria-describedby', 'adblock-description');
       adBlockOverlay.innerHTML = `
-<div class="glow-border bg-dark rounded-2xl p-8 shadow-2xl max-w-md w-full animate-fade-in border-4 border-gradient-to-r from-purple-500 via-indigo-500 to-blue-500">
+<div class="glow-border bg-grey-900 rounded-2xl p-8 shadow-2xl max-w-md w-full animate-fade-in border-4 border-gradient-to-r from-purple-500 via-indigo-500 to-blue-500">
   <i data-lucide="alert-triangle" class="w-12 h-12 text-red-300 mx-auto mb-4" aria-hidden="true"></i>
   <h2 id="adblock-title" class="text-3xl font-bold text-white mb-4">Ad Blocker Detected</h2>
   <p id="adblock-description" class="text-gray-300 mb-6">Please disable your ad blocker to continue accessing CrazyAlts. Ads help us keep this service free!</p>
