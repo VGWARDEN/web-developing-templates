@@ -1,3 +1,4 @@
+// Function to show the Adblock overlay
 function showAdBlockOverlay() {
   const adBlockOverlay = document.createElement('div');
   adBlockOverlay.className = 'fixed inset-0 flex flex-col items-center justify-center bg-black bg-opacity-100 z-[9999] text-center p-8'; // Solid black background for overlay
@@ -16,9 +17,10 @@ function showAdBlockOverlay() {
     </div>
   `;
   document.body.appendChild(adBlockOverlay);
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden'; // Disable scrolling when overlay is present
 }
 
+// Function to detect if AdBlock is enabled
 function detectAdBlock() {
   let adBlocked = false;
 
